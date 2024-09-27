@@ -18,8 +18,9 @@ const SubTitle = styled.div`
 
 const date = new Date();
 
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-const formattedDate = date.toLocaleDateString('en-TH', options).replace(/, \d{4}/, '');
+const options = { weekday: 'long' };
+const formattedDate = date.toLocaleDateString('en-TH', options)
+
 
 function NavBar() {
     return (
@@ -27,7 +28,7 @@ function NavBar() {
             <HeaderTitle>
                 JATUPORN
             </HeaderTitle>
-            <SubTitle>{formattedDate}</SubTitle>
+            <SubTitle>Healthcheck, {formattedDate}</SubTitle>
         </Box>
     )
 }
