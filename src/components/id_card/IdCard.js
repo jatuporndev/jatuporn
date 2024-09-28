@@ -1,6 +1,7 @@
 import React from "react";
 import Barcode from "react-barcode";
 import styled from "styled-components";
+import DetailCardValue from "./DetailCardValue";
 
 const MainCard = styled.div`
   height: 55mm;
@@ -42,36 +43,32 @@ const RightDetail = styled.div`
 const IconCardBox = styled.div`
   width: 100%;
   display: flex;
-  height: 80px;
+  height: 100%;
   justify-content: center;
 `;
 
 const IconImage = styled.img`
-  max-width: 90%;
-  height: 70px;
+  max-width: 100%;
+  height: 75px;
   object-fit: contain;
   align-self: center;
+  object-fit: contain;
 `;
 
 const Dot = styled.div`
   font-family: "Pangolin";
   font-size: 12px;
+  margin-bottom: 8px;
 `;
 
 const DetailBox = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
+  row-gap: 8px;
   grid-template-columns: auto auto;
   align-items: center;
-  justify-content: space-around;
-`;
-const TextTitle = styled.div`
-  font-size: 12px;
-`;
-
-const TextValue = styled.div`
-  font-size: 16px;
+  justify-content: space-between;
 `;
 
 function IdCard(props) {
@@ -81,7 +78,7 @@ function IdCard(props) {
     <MainCard>
       <LeftDetail>
         <ProfileImage
-          src="https://images.unsplash.com/photo-1662826312329-00bca2d79204?q=80&w=1808&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src={require("../../resouses/profile/profile1.jpg")}
           alt="profile"
           title="profile"
         />
@@ -98,27 +95,19 @@ function IdCard(props) {
       <RightDetail>
         <IconCardBox>
           <IconImage
-            src={require("../../resouses/icon-card/icon-card.png")}
+            src={require("../../resouses/icon-card/icon-card-2.png")}
           ></IconImage>
         </IconCardBox>
         <Dot>- - - - - - - - - - - - - - - - - - - - - - - -</Dot>
         <DetailBox>
-          {setTextValue("Name", "JATUPORN")}
-          {setTextValue("LastName", "SAENTHIP")}
-          {setTextValue("NickName", "OHM")}
-          {setTextValue("Pre", "MR.")}
+          <DetailCardValue title="Name" value="MR. JATUPORN"></DetailCardValue>
+          <DetailCardValue title="LastName" value="SAENTHIP"></DetailCardValue>
+          <DetailCardValue title="NickName" value="OHM"></DetailCardValue>
+          <DetailCardValue title="DOB" value="1999"></DetailCardValue>
         </DetailBox>
       </RightDetail>
     </MainCard>
   );
 }
 
-function setTextValue(key, value) {
-  return (
-    <TextTitle>
-      {key}
-      <TextValue>{value}</TextValue>
-    </TextTitle>
-  );
-}
 export default IdCard;

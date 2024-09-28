@@ -38,7 +38,7 @@ function NavBar() {
   return (
     <Box>
       <HeaderContainer>
-        <HeaderTitle>JATUPORN</HeaderTitle>
+        <HeaderTitle onClick={() => console.log("test")}>JATUPORN</HeaderTitle>
         <SubTitle>Healthcheck, {formattedDate}</SubTitle>
       </HeaderContainer>
       <>
