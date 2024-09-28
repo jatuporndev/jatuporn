@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.js": "/jatuporn/static/js/main.5e30dcf1.js",
+    "main.js": "/jatuporn/static/js/main.157dd2f9.js",
     "static/js/453.aacf0a26.chunk.js": "/jatuporn/static/js/453.aacf0a26.chunk.js",
+    "static/media/github.svg": "/jatuporn/static/media/github.61b253625339b5d526df2a3127674ffd.svg",
     "index.html": "/jatuporn/index.html",
-    "main.5e30dcf1.js.map": "/jatuporn/static/js/main.5e30dcf1.js.map",
+    "main.157dd2f9.js.map": "/jatuporn/static/js/main.157dd2f9.js.map",
     "453.aacf0a26.chunk.js.map": "/jatuporn/static/js/453.aacf0a26.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.5e30dcf1.js"
+    "static/js/main.157dd2f9.js"
   ]
 }
