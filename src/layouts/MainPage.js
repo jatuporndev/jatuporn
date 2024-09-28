@@ -7,7 +7,6 @@ function MainPage(props) {
     <>
     <NavBar></NavBar>
     <Content></Content>
-
     </>
   )
 }
