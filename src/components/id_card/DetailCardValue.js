@@ -16,7 +16,6 @@ const TextWrapper = styled.div``;
 
 function DetailCardValue(props) {
   const { title, value } = props;
-  console.log(props);
 
   return (
     <TextWrapper>

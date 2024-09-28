@@ -7,7 +7,7 @@ const MainCard = styled.div`
   height: 55mm;
   width: 93.6mm;
   max-width: 100%;
-  background-color: #beffff;
+  background-color: ${(props) => props.$color};
   border: 1px solid black;
   border-radius: 12px;
   display: flex;
@@ -59,6 +59,11 @@ const Dot = styled.div`
   font-family: "Pangolin";
   font-size: 12px;
   margin-bottom: 8px;
+  white-space: nowrap;
+
+  @media (max-width: 374px) {
+    font-size: 10px;
+  }
 `;
 
 const DetailBox = styled.div`
@@ -72,10 +77,11 @@ const DetailBox = styled.div`
 `;
 
 function IdCard(props) {
+  const { colorCard } = props;
   const barcodeValue = "jatuporndev";
 
   return (
-    <MainCard>
+    <MainCard $color={colorCard}>
       <LeftDetail>
         <ProfileImage
           src={require("../../resouses/profile/profile1.jpg")}
@@ -100,7 +106,7 @@ function IdCard(props) {
         </IconCardBox>
         <Dot>- - - - - - - - - - - - - - - - - - - - - - - -</Dot>
         <DetailBox>
-          <DetailCardValue title="Name" value="MR. JATUPORN"></DetailCardValue>
+          <DetailCardValue title="Name" value="JATUPORN"></DetailCardValue>
           <DetailCardValue title="LastName" value="SAENTHIP"></DetailCardValue>
           <DetailCardValue title="NickName" value="OHM"></DetailCardValue>
           <DetailCardValue title="DOB" value="1999"></DetailCardValue>
