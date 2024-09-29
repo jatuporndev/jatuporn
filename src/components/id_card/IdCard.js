@@ -58,8 +58,23 @@ const IconImage = styled.img`
 const Dot = styled.div`
   font-family: "Pangolin";
   font-size: 12px;
+  margin-bottom: 10px;
+  margin-top: 4px;
+  white-space: nowrap;
+
+  @media (max-width: 374px) {
+    font-size: 10px;
+  }
+`;
+
+const Under = styled.div`
+  font-family: "Pangolin";
+  font-size: 12px;
   margin-bottom: 8px;
   white-space: nowrap;
+  margin-top: 4px;
+  width: 100%;
+  text-align: center;
 
   @media (max-width: 374px) {
     font-size: 10px;
@@ -99,18 +114,24 @@ function IdCard(props) {
         />
       </LeftDetail>
       <RightDetail>
-        <IconCardBox>
+        {/* <IconCardBox>
           <IconImage
             src={require("../../resouses/icon-card/icon-card-2.png")}
           ></IconImage>
-        </IconCardBox>
+        </IconCardBox> */}
+  
+        PERSONAL ID CARD
         <Dot>- - - - - - - - - - - - - - - - - - - - - - - -</Dot>
         <DetailBox>
           <DetailCardValue title="Name" value="JATUPORN"></DetailCardValue>
           <DetailCardValue title="LastName" value="SAENTHIP"></DetailCardValue>
           <DetailCardValue title="NickName" value="OHM"></DetailCardValue>
           <DetailCardValue title="DOB" value="1999"></DetailCardValue>
+
+          <DetailCardValue title="Sex" value="M"></DetailCardValue>
+          <DetailCardValue title="Nationality" value="THAI"></DetailCardValue>
         </DetailBox>
+        <Under> </Under>
       </RightDetail>
     </MainCard>
   );

@@ -6,8 +6,7 @@ const ColorChangerMain = styled.div`
   margin-top: 24px;
   width: 50%;
   height: auto;
-  align-self: center;
-  align-items: center;
+  color: #616161;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -15,9 +14,10 @@ const ColorChangerMain = styled.div`
 `;
 
 const ColorBox = styled.div`
-  margin-top: 16px;
+  margin-top: 8px;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 40px);
+  grid-template-columns: repeat(auto-fit, 49px);
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
@@ -38,6 +38,7 @@ export default function ColorChanger(props) {
   ];
 
   const handleColorSelect = (color) => {
+    localStorage.setItem("color", color)
     setColorCard(color);
   };
 
