@@ -28,6 +28,7 @@ const ProfileImage = styled.img`
   max-height: 100%;
   border: 1px solid black;
   object-fit: cover;
+  background-color: white;
 `;
 
 const RightDetail = styled.div`
@@ -45,21 +46,46 @@ const IconCardBox = styled.div`
   display: flex;
   height: 100%;
   justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 `;
 
-const IconImage = styled.img`
-  max-width: 100%;
-  height: 75px;
+const Icon = styled.img`
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid black;
   object-fit: contain;
-  align-self: center;
-  object-fit: contain;
+  padding: 1px;
+  background-color: white;
+`;
+
+const TextTitle = styled.div`
+  height: 28px;
+  line-height: 32px;
+  text-align: center;
 `;
 
 const Dot = styled.div`
   font-family: "Pangolin";
   font-size: 12px;
+  margin-bottom: 10px;
+  margin-top: 2px;
+  white-space: nowrap;
+
+  @media (max-width: 374px) {
+    font-size: 10px;
+  }
+`;
+
+const Under = styled.div`
+  font-family: "Pangolin";
+  font-size: 12px;
   margin-bottom: 8px;
   white-space: nowrap;
+  margin-top: 4px;
+  width: 100%;
+  text-align: center;
 
   @media (max-width: 374px) {
     font-size: 10px;
@@ -77,7 +103,7 @@ const DetailBox = styled.div`
 `;
 
 function IdCard(props) {
-  const { colorCard } = props;
+  const { colorCard, iconCard } = props;
   const barcodeValue = "jatuporndev";
 
   return (
@@ -100,9 +126,8 @@ function IdCard(props) {
       </LeftDetail>
       <RightDetail>
         <IconCardBox>
-          <IconImage
-            src={require("../../resouses/icon-card/icon-card-2.png")}
-          ></IconImage>
+          <TextTitle>PERSONAL ID CARD</TextTitle>
+          <Icon src={require(`../../resouses/icon-card/${iconCard}`)} />
         </IconCardBox>
         <Dot>- - - - - - - - - - - - - - - - - - - - - - - -</Dot>
         <DetailBox>
@@ -110,7 +135,10 @@ function IdCard(props) {
           <DetailCardValue title="LastName" value="SAENTHIP"></DetailCardValue>
           <DetailCardValue title="NickName" value="OHM"></DetailCardValue>
           <DetailCardValue title="DOB" value="1999"></DetailCardValue>
+          <DetailCardValue title="Sex" value="M"></DetailCardValue>
+          <DetailCardValue title="Nationality" value="THAI"></DetailCardValue>
         </DetailBox>
+        <Under> </Under>
       </RightDetail>
     </MainCard>
   );
