@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.js": "/jatuporn/static/js/main.1d5662bd.js",
+    "main.js": "/jatuporn/static/js/main.0123f04e.js",
     "static/js/453.aacf0a26.chunk.js": "/jatuporn/static/js/453.aacf0a26.chunk.js",
     "static/media/profile1.jpg": "/jatuporn/static/media/profile1.fffbf375980642f9c588.jpg",
-    "static/media/icon-card-2.png": "/jatuporn/static/media/icon-card-2.785c4aae167e2d9b163d.png",
+    "static/media/car-ramen.png": "/jatuporn/static/media/car-ramen.8b8afbe5e9d7782029a8.png",
+    "static/media/cat.png": "/jatuporn/static/media/cat.5fe688ba35a399391321.png",
+    "static/media/cat-eat.jpg": "/jatuporn/static/media/cat-eat.d4e44221b1e2bbe39906.jpg",
+    "static/media/cat-ah.png": "/jatuporn/static/media/cat-ah.f36a38814ef304f45f16.png",
+    "static/media/fish.png": "/jatuporn/static/media/fish.16a18cacd35f6a0c5ef9.png",
     "static/media/github.svg": "/jatuporn/static/media/github.61b253625339b5d526df2a3127674ffd.svg",
     "index.html": "/jatuporn/index.html",
-    "main.1d5662bd.js.map": "/jatuporn/static/js/main.1d5662bd.js.map",
+    "main.0123f04e.js.map": "/jatuporn/static/js/main.0123f04e.js.map",
     "453.aacf0a26.chunk.js.map": "/jatuporn/static/js/453.aacf0a26.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1d5662bd.js"
+    "static/js/main.0123f04e.js"
   ]
 }
