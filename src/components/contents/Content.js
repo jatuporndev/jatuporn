@@ -17,17 +17,22 @@ const MainContent = styled.div`
 
 function Content(props) {
   let color = localStorage.getItem("color");
-  if (!color) color = "#D1E9F6"
+  if (!color) color = "#D1E9F6";
+
+  let icon = localStorage.getItem("icon");
+  if (!icon) icon = "cat.png";
+
   const [colorCard, setColorCard] = useState(color);
+  const [iconCard, setIconCard] = useState(icon);
 
   return (
     <MainContent>
-      <IdCard colorCard={colorCard}></IdCard>
+      <IdCard colorCard={colorCard} iconCard={iconCard}></IdCard>
       <ColorChanger
         colorCard={colorCard}
         setColorCard={setColorCard}
       ></ColorChanger>
-      {/* <LogoChanger></LogoChanger> */}
+      <LogoChanger iconCard={iconCard} setIconCard={setIconCard}></LogoChanger>
     </MainContent>
   );
 }

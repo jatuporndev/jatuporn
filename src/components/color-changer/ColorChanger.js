@@ -20,21 +20,23 @@ const ColorBox = styled.div`
   grid-template-columns: repeat(auto-fit, 49px);
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 `;
 
 export default function ColorChanger(props) {
   const {colorCard, setColorCard} = props
   const colors = [
     "#F5F5F7",
-    "#FFE1FF",
+    "#e8e8e4",
     "#CDC1FF",
     "#D1E9F6",
     "#FEF9D9",
     "#FFD7C4",
-    "#BEC6A0",
+    "#fad2e1",
     "#FFEAE3",
     "#DEE5D4",
+    "#ffa6c1",
+    "#cdeac0",
   ];
 
   const handleColorSelect = (color) => {

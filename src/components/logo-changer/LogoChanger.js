@@ -3,7 +3,7 @@ import styled from "styled-components";
 import LogoView from "./LogoView";
 
 const LogoChangerMain = styled.div`
-  margin-top: 24px;
+  margin-top: 16px;
   width: 50%;
   height: auto;
   align-self: center;
@@ -18,27 +18,32 @@ const LogoMain = styled.div`
   margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   row-gap: 8px;
-  justify-content: space-between;
 `;
 
 function LogoChanger(props) {
+  const { iconCard, setIconCard } = props
+
   const logos = [
-    "icon-card-3.png",
-    "icon-card-3.png",
-    "icon-card-2.png",
-    "icon-card-3.png",
+    "cat.png",
+    "cat-eat.jpg",
+    "car-ramen.png",
+    "cat-ah.png",
+    "fish.png",
   ];
 
   return (
     <LogoChangerMain>
       Logo
       <LogoMain>
-        {logos.map((fileName) => (
+        {logos.map((fileName, index) => (
           <LogoView
+            key={index} 
             image={require(`../../resouses/icon-card/${fileName}`)}
-            isSelected={fileName == 'icon-card-2.png'}
+            fileName={fileName}
+            isSelected={fileName === iconCard}
+            setIconCard={setIconCard}
           ></LogoView>
         ))}
       </LogoMain>

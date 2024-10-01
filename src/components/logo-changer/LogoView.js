@@ -2,28 +2,36 @@ import React from "react";
 import styled from "styled-components";
 
 const ImageViewWrapper = styled.div`
-  border: 2px solid black;
+  border-radius: 50%;
+  height: 56px;
+  width: 56px;
+  background-color: ${(props) => props.$color};
   border: ${(props) => props.$isSelected ? "2px solid black" : "2px solid #EEEEEE"};
-  height: 78px;
+  cursor: pointer;
+  display: flex;
   align-items: center;
-  border-radius: 4%;
-  flex: 1 0 21%;
-
-  @media (max-width: 768px) {
-    flex: 1 0 44%;
-  }
+  justify-content: center;
+  padding: 2px;
 `;
 
 const ImageView = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 50%;
 `;
 
-export default function LogoView({ image, isSelected }) {
+export default function LogoView({ image, isSelected, setIconCard, fileName }) {
+
+  const handleIconSelect = (icon) => {
+    localStorage.setItem("icon", icon)
+    setIconCard(icon)
+  };
+
+
   return (
-    <ImageViewWrapper $isSelected={isSelected}>
-      <ImageView src={image} alt={image}></ImageView>
+    <ImageViewWrapper $isSelected={isSelected} onClick={() => handleIconSelect(fileName)}>
+      <ImageView src={image} alt="logo" ></ImageView>
     </ImageViewWrapper>
   );
 }
