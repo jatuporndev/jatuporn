@@ -3,7 +3,8 @@ import styled from "styled-components";
 import LogoView from "./LogoView";
 
 const LogoChangerMain = styled.div`
-  margin-top: 16px;
+  font-family: "Pangolin";
+  margin-top: 8px;
   width: 50%;
   height: auto;
   align-self: center;

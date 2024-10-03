@@ -3,17 +3,21 @@ import styled from "styled-components";
 import IdCard from "../id_card/IdCard";
 import ColorChanger from "../color-changer/ColorChanger";
 import LogoChanger from "../logo-changer/LogoChanger";
+import MySkill from "../my-skill/MySkill";
 
 const MainContent = styled.div`
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-left: 16px;
-  padding-right: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
 `;
+
+const DoneBtn = styled.button`
+  font-family: "Pangolin";
+`
 
 function Content(props) {
   let color = localStorage.getItem("color");
@@ -27,12 +31,18 @@ function Content(props) {
 
   return (
     <MainContent>
-      <IdCard colorCard={colorCard} iconCard={iconCard}></IdCard>
-      <ColorChanger
-        colorCard={colorCard}
-        setColorCard={setColorCard}
-      ></ColorChanger>
-      <LogoChanger iconCard={iconCard} setIconCard={setIconCard}></LogoChanger>
+        <IdCard colorCard={colorCard} iconCard={iconCard}></IdCard>
+        <ColorChanger
+          colorCard={colorCard}
+          setColorCard={setColorCard}
+        ></ColorChanger>
+        <LogoChanger
+          iconCard={iconCard}
+          setIconCard={setIconCard}
+        ></LogoChanger>
+        {/* <DoneBtn>
+          done
+        </DoneBtn> */}
     </MainContent>
   );
 }

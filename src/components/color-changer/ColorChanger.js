@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ColorView from "./ColorView";
 
 const ColorChangerMain = styled.div`
+
   margin-top: 24px;
   width: 50%;
   height: auto;
@@ -20,7 +21,7 @@ const ColorBox = styled.div`
   grid-template-columns: repeat(auto-fit, 49px);
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 2px;
 `;
 
 export default function ColorChanger(props) {
