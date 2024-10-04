@@ -43,7 +43,8 @@ const UnderLine = styled.div`
   margin: 0 auto; 
   height: 2px;
   background-color: #e0e0e0;
-  transition: width 300ms;
+  transition: ${(props) => (props.$isScrolled ? 'width 1500ms' : 'width 700ms')};
+
 `;
 
 function NavBar({ isScrolled }) {

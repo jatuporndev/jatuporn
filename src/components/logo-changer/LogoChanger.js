@@ -9,8 +9,14 @@ const LogoChangerMain = styled.div`
   height: auto;
   align-self: center;
   color: #616161;
+  padding: 0 16px;
+  box-sizing: border-box;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
+    width: 70%;
+  }
+
+  @media (max-width: 767px) {
     width: 100%;
   }
 `;

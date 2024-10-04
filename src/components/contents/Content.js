@@ -12,12 +12,16 @@ const MainContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 16px;
 `;
 
 const DoneBtn = styled.button`
+  margin-top: 36px;
   font-family: "Pangolin";
-`
+
+  @media (max-width: 767px) {
+    /* margin-bottom: 44px; */
+  }
+`;
 
 function Content(props) {
   let color = localStorage.getItem("color");
@@ -31,18 +35,13 @@ function Content(props) {
 
   return (
     <MainContent>
-        <IdCard colorCard={colorCard} iconCard={iconCard}></IdCard>
-        <ColorChanger
-          colorCard={colorCard}
-          setColorCard={setColorCard}
-        ></ColorChanger>
-        <LogoChanger
-          iconCard={iconCard}
-          setIconCard={setIconCard}
-        ></LogoChanger>
-        {/* <DoneBtn>
-          done
-        </DoneBtn> */}
+      <IdCard colorCard={colorCard} iconCard={iconCard}></IdCard>
+      <ColorChanger
+        colorCard={colorCard}
+        setColorCard={setColorCard}
+      ></ColorChanger>
+      <LogoChanger iconCard={iconCard} setIconCard={setIconCard}></LogoChanger>
+      <DoneBtn>NEXT</DoneBtn>
     </MainContent>
   );
 }
