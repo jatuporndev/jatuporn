@@ -5,6 +5,10 @@ const Container = styled.div`
   position: fixed;
   width: 100%;
   z-index: 1000;
+
+  @media (max-height: 430px) {
+    position: static;
+  }
 `;
 
 const Box = styled.div`
@@ -29,8 +33,8 @@ const HeaderTitle = styled.div`
 `;
 
 const NavIcon = styled.img`
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
 `;
 
 const SubTitle = styled.div`

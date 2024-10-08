@@ -3,7 +3,6 @@ import styled from "styled-components";
 import IdCard from "../id_card/IdCard";
 import ColorChanger from "../color-changer/ColorChanger";
 import LogoChanger from "../logo-changer/LogoChanger";
-import MySkill from "../my-skill/MySkill";
 
 const MainContent = styled.div`
   max-width: 100%;
@@ -12,14 +11,31 @@ const MainContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-height: 430px) {
+    height: auto;
+    padding: 24px 0;
+  }
 `;
 
 const DoneBtn = styled.button`
   margin-top: 36px;
   font-family: "Pangolin";
+  background-color: white;
+  border-radius: 22%;
+  font-size: 18px;
+  padding: 4px 24px;
+  cursor: pointer;
+  border-color: black;
+  color: black;
+  text-align: center;
 
-  @media (max-width: 767px) {
-    /* margin-bottom: 44px; */
+  @media (hover: hover) {
+    &:hover {
+      background-color: ${(props) => props.$color};
+      border-color: ${(props) => props.$color};
+      transition: background-color ease 0.4s;
+      letter-spacing: 2px;
+    }
   }
 `;
 
@@ -41,7 +57,7 @@ function Content(props) {
         setColorCard={setColorCard}
       ></ColorChanger>
       <LogoChanger iconCard={iconCard} setIconCard={setIconCard}></LogoChanger>
-      <DoneBtn>NEXT</DoneBtn>
+      <DoneBtn $color={colorCard}>NEXT</DoneBtn>
     </MainContent>
   );
 }

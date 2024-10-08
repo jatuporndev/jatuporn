@@ -8,6 +8,7 @@ const MainCard = styled.div`
   width: 93.6mm;
   max-width: 100%;
   background-color: ${(props) => props.$color};
+  transition: background-color ease 0.4s;
   border: 1px solid black;
   border-radius: 12px;
   display: flex;

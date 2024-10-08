@@ -12,7 +12,7 @@ const ColorChangerMain = styled.div`
   box-sizing: border-box;
 
   @media (max-width: 1024px) {
-    width: 70%;
+    width: 80%;
   }
 
   @media (max-width: 767px) {
