@@ -6,13 +6,37 @@ import LogoChanger from "../logo-changer/LogoChanger";
 
 const MainContent = styled.div`
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-left: 16px;
-  padding-right: 16px;
+  justify-content: center;
+  align-items: center;
+  @media (max-height: 430px) {
+    height: auto;
+    padding: 24px 0;
+  }
+`;
+
+const DoneBtn = styled.button`
+  margin-top: 36px;
+  font-family: "Pangolin";
+  background-color: white;
+  border-radius: 22%;
+  font-size: 18px;
+  padding: 4px 24px;
+  cursor: pointer;
+  border-color: black;
+  color: black;
+  text-align: center;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: ${(props) => props.$color};
+      border-color: ${(props) => props.$color};
+      transition: background-color ease 0.4s;
+      letter-spacing: 2px;
+    }
+  }
 `;
 
 function Content(props) {
@@ -33,6 +57,7 @@ function Content(props) {
         setColorCard={setColorCard}
       ></ColorChanger>
       <LogoChanger iconCard={iconCard} setIconCard={setIconCard}></LogoChanger>
+      <DoneBtn $color={colorCard}>NEXT</DoneBtn>
     </MainContent>
   );
 }

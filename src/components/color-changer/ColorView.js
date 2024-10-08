@@ -7,6 +7,7 @@ const ViewColor = styled.div`
   width: 38px;
   background-color: ${(props) => props.$color};
   border: 3px solid white;
+  flex-shrink: 0;
   outline: ${(props) => props.$isSelected ? "1px solid black" : "1px solid white"};
   cursor: pointer;
 `;

@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const ImageViewWrapper = styled.div`
   border-radius: 50%;
-  height: 56px;
-  width: 56px;
+  height: 32px;
+  width: 32px;
   background-color: ${(props) => props.$color};
   border: ${(props) => props.$isSelected ? "2px solid black" : "2px solid #EEEEEE"};
   cursor: pointer;

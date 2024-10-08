@@ -3,7 +3,7 @@ import MainPage from './layouts/MainPage';
 
 function App() {
   return (
-      <MainPage input={"test"}></MainPage>
+      <MainPage></MainPage>
   );
 }
 
