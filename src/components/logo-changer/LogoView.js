@@ -12,6 +12,13 @@ const ImageViewWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2px;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(2.05);
+      background-color: white;
+    }
+  }
 `;
 
 const ImageView = styled.img`

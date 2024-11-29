@@ -21,7 +21,7 @@ function MainPage(props) {
     <>
       <NavBar isScrolled={isScrolled}></NavBar>
       <Content></Content>
-      {/* <MySkill></MySkill> */}
+      <MySkill></MySkill>
     </>
   );
 }

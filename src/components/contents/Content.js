@@ -39,6 +39,13 @@ const DoneBtn = styled.button`
   }
 `;
 
+const ScrollIcon = styled.img`
+  width: 18px;
+  height: 18px;
+  transform: rotate(90deg);
+  margin-top: 12px;
+`
+
 function Content(props) {
   let color = localStorage.getItem("color");
   if (!color) color = "#D1E9F6";
@@ -49,6 +56,13 @@ function Content(props) {
   const [colorCard, setColorCard] = useState(color);
   const [iconCard, setIconCard] = useState(icon);
 
+  function onClick(e) {
+    const element = document.getElementById('myskill')
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <MainContent>
       <IdCard colorCard={colorCard} iconCard={iconCard}></IdCard>
@@ -57,7 +71,8 @@ function Content(props) {
         setColorCard={setColorCard}
       ></ColorChanger>
       <LogoChanger iconCard={iconCard} setIconCard={setIconCard}></LogoChanger>
-      <DoneBtn $color={colorCard}>NEXT</DoneBtn>
+      <DoneBtn $color={colorCard} onClick={onClick}>NEXT</DoneBtn>
+      <ScrollIcon src={require("../../resouses/utility/can-scroll.gif")}></ScrollIcon>
     </MainContent>
   );
 }
