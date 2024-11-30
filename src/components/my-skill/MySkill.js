@@ -39,9 +39,11 @@ function MySkill(props) {
     { icon: "react.svg", detail: "this project made with reactJS" },
     { icon: "nodejs.svg", detail: "nodeJs" },
     { icon: "python.svg", detail: "Python" },
-    { icon: "graphql.svg", detail: "Graphql" },
+    { icon: "graphql.svg", detail: "GraphQL and Apollo GraphQL" },
     { icon: "docker.svg", detail: "Docker" },
     { icon: "aws.svg", detail: "Basic AWS" },
+    { icon: "firebase.svg", detail: "firebase" },
+    { icon: "postgresql.svg", detail: "postgresql" },
   ];
 
   return (
