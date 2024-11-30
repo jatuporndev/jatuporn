@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/jatuporn/static/js/main.4a36cf98.js",
+    "main.js": "/jatuporn/static/js/main.da069354.js",
     "static/js/453.aacf0a26.chunk.js": "/jatuporn/static/js/453.aacf0a26.chunk.js",
     "static/media/can-scroll.gif": "/jatuporn/static/media/can-scroll.359b98a1ad85f8fc651e.gif",
     "static/media/profile1.jpg": "/jatuporn/static/media/profile1.fffbf375980642f9c588.jpg",
@@ -9,6 +9,7 @@
     "static/media/cat-eat.jpg": "/jatuporn/static/media/cat-eat.d4e44221b1e2bbe39906.jpg",
     "static/media/cat-ah.png": "/jatuporn/static/media/cat-ah.f36a38814ef304f45f16.png",
     "static/media/fish.png": "/jatuporn/static/media/fish.16a18cacd35f6a0c5ef9.png",
+    "static/media/postgresql.svg": "/jatuporn/static/media/postgresql.5554dfac6639fb169614.svg",
     "static/media/nodejs.svg": "/jatuporn/static/media/nodejs.9b464a9aee62c52faeeb.svg",
     "static/media/aws.svg": "/jatuporn/static/media/aws.7fa306c206a3302fdf64.svg",
     "static/media/react.svg": "/jatuporn/static/media/react.e68b35f4774979ae220b.svg",
@@ -17,13 +18,14 @@
     "static/media/kotlin.svg": "/jatuporn/static/media/kotlin.22a89dcc49b70fcf5274.svg",
     "static/media/graphql.svg": "/jatuporn/static/media/graphql.411dfe575391761bc9d9.svg",
     "static/media/swift.svg": "/jatuporn/static/media/swift.86f5e09ea16bda6487fe.svg",
+    "static/media/firebase.svg": "/jatuporn/static/media/firebase.8f69a13150a1594d8fb7.svg",
     "static/media/flutter.svg": "/jatuporn/static/media/flutter.9a496ae25b064ea25261.svg",
     "static/media/docker.svg": "/jatuporn/static/media/docker.402471a8309d58457b24.svg",
     "index.html": "/jatuporn/index.html",
-    "main.4a36cf98.js.map": "/jatuporn/static/js/main.4a36cf98.js.map",
+    "main.da069354.js.map": "/jatuporn/static/js/main.da069354.js.map",
     "453.aacf0a26.chunk.js.map": "/jatuporn/static/js/453.aacf0a26.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4a36cf98.js"
+    "static/js/main.da069354.js"
   ]
 }
