@@ -57,11 +57,14 @@ function Content(props) {
   const [iconCard, setIconCard] = useState(icon);
 
   function onClick(e) {
-    const element = document.getElementById('myskill')
-    element?.scrollIntoView({
-      behavior: 'smooth'
-    })
+    const id = 'myskill';
+    const yOffset = -120; 
+    const element = document.getElementById(id);
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+    window.scrollTo({top: y, behavior: 'smooth'});
   }
+  
 
   return (
     <MainContent>
