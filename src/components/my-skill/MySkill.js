@@ -16,7 +16,6 @@ const TitleText = styled.div`
   max-width: 800px;
   width: 90%; 
   transition: all 0.3s ease;
-
 `;
 
 const TechBoxContainer = styled.div`
