@@ -1,27 +1,39 @@
 import React from "react";
 import styled from "styled-components";
+import projectData from "../../resouses/projects/projects-data.json";
 import ProjectCard from "./ProjectCard";
+import { DoneBtn } from "../../styled/button";
 
 const MainDiv = styled.div`
   height: auto;
-  width: 100%;
+  max-width: 100%;
   padding-top: 48px;
+  align-items: center;
 `;
 
 const TitleText = styled.div`
-  margin: 0 auto 32px auto;
+  width: 60%;
+  margin: auto;
   font-size: 24px;
   font-weight: bold;
   font-family: "Pangolin";
-  max-width: 800px;
-  width: 90%;
   transition: all 0.3s ease;
+
+  @media (max-width: 1024px) {
+    width: 80%; 
+  }
+
+  @media (max-width: 767px) {
+    width: 85%;
+ 
+  }
 
 `;
 
 const Box = styled.div`
   padding-top: 24px;
-  height: 500px;
+  padding-bottom: 64px;
+  height: auto;
   width: 60%;
   margin: auto;
   display: flex;
@@ -34,16 +46,33 @@ const Box = styled.div`
 
   @media (max-width: 767px) {
     width: 100%;
+    gap: 48px;
   }
 `;
 
+const More = styled(DoneBtn)`
+  margin-top: 8px;
+`;
+
 export default function Projects(props) {
+  let color = props.colorCard
+
+  function onClick(e) {
+    const url = 'https://github.com/jatuporndev?tab=repositories';
+    window.open(url, '_blank');
+  }
+
   return (
     <MainDiv>
-      <TitleText>Projects</TitleText>
+      <TitleText>PROJECTS</TitleText>
       <Box>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
+        {projectData.map((data) => (
+          <ProjectCard color={color} data={data}></ProjectCard>
+        ))}
+
+        <More $color={color} onClick={onClick}>
+          VIEW MORE
+        </More>
       </Box>
     </MainDiv>
   );

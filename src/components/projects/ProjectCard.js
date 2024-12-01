@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const Box = styled.a`
   display: flex;
@@ -11,8 +12,9 @@ const Box = styled.a`
   cursor: default;
 
   @media (max-width: 767px) {
-    width: 100%;
     flex-direction: column;
+    margin-left: 28px;
+    margin-right: 28px;
   }
 
   @media (hover: hover) {
@@ -23,8 +25,8 @@ const Box = styled.a`
 `;
 
 const BoxImage = styled.img`
-  width: 200x;
-  height: 170px;
+  width: 2000x;
+  height: 200px;
   object-fit: cover;
   border: 2px solid #eeeeee;
   border-radius: 4px;
@@ -35,12 +37,24 @@ const BoxDetail = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-top: 24px;
+  }
 `;
 
 const TopBox = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 767px) {
+    gap: 8px;
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.div`
@@ -57,7 +71,12 @@ const Title = styled.div`
 
 const LinkBox = styled.div`
   display: flex;
+  width: fit-content;
   gap: 12px;
+
+  @media (max-width: 767px) {
+    flex-direction: row-reverse;
+  }
 `;
 
 const Detail = styled.div`
@@ -68,7 +87,7 @@ const Detail = styled.div`
 const IconLink = styled.img`
   width: 24px;
   height: 24px;
-  padding-right: 2px;
+
 
   @media (hover: hover) {
     &:hover {
@@ -84,7 +103,7 @@ const GithubLink = styled.a`
   text-decoration: none;
   color: white;
   background-color: black;
-  padding: 1px 4px;
+  padding: 1px 8px;
   border-radius: 8px;
   font-size: 13px;
 
@@ -104,36 +123,23 @@ const TagBox = styled.div`
 `;
 
 const Tag = styled.div`
-  background-color: #d1e9f6;
+  background-color: ${(props) => props.$color};
   padding: 2px 6px;
   border-radius: 20%;
   font-size: 13px;
 `;
 
-export default function ProjectCard() {
-  const tags = ["Android", "Kotlin", "MVVM", "Android", "Kotlin"];
-  const projectLink = "https://redketchup.io/color-picker";
-  const refLink = [
-    {
-      type: "play-style",
-      link: "https://stackoverflow.com/questions/5868850/creating-list-of-objects-in-javascript",
-    },
-    {
-      type: "app-store",
-      link: "https://stackoverflow.com/questions/5868850/creating-list-of-objects-in-javascript",
-    },
-  ];
-
+export default function ProjectCard({ data, color }) {
   return (
-    <Box href={projectLink} target="_blank" rel="noreferrer">
+    <Box href={data.link} target="_blank" rel="noreferrer">
       <BoxImage
-        src={require(`../../resouses/projects/portfolio-1.jpg`)}
+        src={require(`../../resouses/projects/${data.key_image}`)}
       ></BoxImage>
       <BoxDetail>
         <TopBox>
-          <Title>Lorem Ipsum</Title>
+          <Title>{data.name}</Title>
           <LinkBox>
-            {refLink.map((ref) => (
+            {data.store.map((ref) => (
               <a
                 key={ref.type}
                 href={ref.link}
@@ -155,17 +161,29 @@ export default function ProjectCard() {
             </GithubLink>
           </LinkBox>
         </TopBox>
-        <Detail>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.
-        </Detail>
+        <Detail>{data.detail}</Detail>
         <TagBox>
-          {tags.map((tag) => (
-            <Tag>{tag}</Tag>
+          {data.tag.map((tag) => (
+            <Tag $color={color}>{tag}</Tag>
           ))}
         </TagBox>
       </BoxDetail>
     </Box>
   );
 }
+
+ProjectCard.propTypes = {
+  data: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    key_image: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    tag: PropTypes.arrayOf(PropTypes.string).isRequired,
+    detail: PropTypes.string.isRequired,
+    store: PropTypes.arrayOf(
+      PropTypes.shape({
+        type: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  }).isRequired,
+};

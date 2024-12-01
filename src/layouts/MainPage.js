@@ -3,9 +3,12 @@ import MySkill from "../components/my-skill/MySkill";
 import NavBar from "../components/NavBar";
 import { React, useEffect, useState } from "react";
 import Projects from "../components/projects/Projects";
+import { getColor } from "../utility/utility";
 
 function MainPage(props) {
+  let color = getColor()
   const [isScrolled, setIsScrolled] = useState(false);
+  const [colorCard, setColorCard] = useState(color);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,9 +24,9 @@ function MainPage(props) {
   return (
     <>
       <NavBar isScrolled={isScrolled}></NavBar>
-      <Content></Content>
+      <Content colorCard={colorCard} setColorCard={setColorCard}></Content>
       <MySkill></MySkill>
-      <Projects></Projects>
+      <Projects colorCard={colorCard}></Projects>
     </>
   );
 }
