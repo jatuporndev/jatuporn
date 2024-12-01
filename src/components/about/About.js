@@ -25,8 +25,9 @@ const Cat = styled.img`
     height: 64px;
     border: 2px solid #EEEEEE;
     border-radius: 50%;
-    object-fit: contain;
+    object-fit: cover;
     margin-bottom: 16px;
+    overflow-clip-margin: unset;
 `;
 
 export default function About ({ iconCard }) {

@@ -18,18 +18,20 @@ const LeftDetail = styled.div`
   display: flex;
   flex-direction: column;
   width: fit-content;
-  align-self: center;
+  align-self: self-end;
   align-items: center;
   padding: 16px;
 `;
 
 const ProfileImage = styled.img`
   width: 110px;
-  height: 150px;
+  height: 142px;
+  border-radius: 1px;
   max-height: 100%;
   border: 1px solid black;
-  object-fit: cover;
   background-color: white;
+  object-fit: cover;
+  overflow-clip-margin: unset;
 `;
 
 const RightDetail = styled.div`

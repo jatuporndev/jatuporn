@@ -26,6 +26,7 @@ const ImageView = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  overflow-clip-margin: unset;
 `;
 
 export default function LogoView({ image, isSelected, setIconCard, fileName }) {
