@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.js": "/jatuporn/static/js/main.e2e7be34.js",
+    "main.js": "/jatuporn/static/js/main.61929ad9.js",
     "static/js/453.aacf0a26.chunk.js": "/jatuporn/static/js/453.aacf0a26.chunk.js",
-    "static/media/profile3.jpg": "/jatuporn/static/media/profile3.dc4fc04262a90ae69d48.jpg",
     "static/media/can-scroll.gif": "/jatuporn/static/media/can-scroll.359b98a1ad85f8fc651e.gif",
+    "static/media/profile3.jpg": "/jatuporn/static/media/profile3.6c0f6c6b3b9f01448443.jpg",
     "static/media/portfolio-1.jpg": "/jatuporn/static/media/portfolio-1.61d3c6c03c5865ac6ec6.jpg",
     "static/media/portfolio-4.jpg": "/jatuporn/static/media/portfolio-4.a13930af87f7f2d5112c.jpg",
     "static/media/portfolio-project.png": "/jatuporn/static/media/portfolio-project.c07e8c2b668f1e5bbaf6.png",
@@ -34,10 +34,10 @@
     "static/media/email.svg": "/jatuporn/static/media/email.d4594538fa464f38ff6c4f4661431ef2.svg",
     "static/media/apollographql.svg": "/jatuporn/static/media/apollographql.2420006b30713cfd0609.svg",
     "index.html": "/jatuporn/index.html",
-    "main.e2e7be34.js.map": "/jatuporn/static/js/main.e2e7be34.js.map",
+    "main.61929ad9.js.map": "/jatuporn/static/js/main.61929ad9.js.map",
     "453.aacf0a26.chunk.js.map": "/jatuporn/static/js/453.aacf0a26.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e2e7be34.js"
+    "static/js/main.61929ad9.js"
   ]
 }
