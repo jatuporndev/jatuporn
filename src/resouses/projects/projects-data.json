@@ -21,12 +21,17 @@
         "store": []
     },
     {
-        "name": "project name",
-        "key_image": "portfolio-1.jpg",
-        "link": "https://stackoverflow.com/questions/5868850/creating-list-of-objects-in-javascript",
-        "tag": ["Android", "Kotlin", "MVVM"],
-        "detail": "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text eversince the 1500s.",
-        "store": []
+        "name": "MyWeb",
+        "key_image": "portfolio-project.png",
+        "link": "https://github.com/jatuporndev/jatuporn",
+        "tag": ["ReactJS"],
+        "detail": "Personal Website and Portfolio Developed with reactJS",
+        "store": [
+            {
+                "type": "web",
+                "link" : "https://jatuporndev.github.io/jatuporn/"
+            }
+        ]
     },
     {
         "name": "project name",

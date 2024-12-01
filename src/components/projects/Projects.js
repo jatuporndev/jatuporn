@@ -66,8 +66,8 @@ export default function Projects(props) {
     <MainDiv>
       <TitleText>PROJECTS</TitleText>
       <Box>
-        {projectData.map((data) => (
-          <ProjectCard color={color} data={data}></ProjectCard>
+        {projectData.map((data, i) => (
+          <ProjectCard color={color} data={data} key={i}></ProjectCard>
         ))}
 
         <More $color={color} onClick={onClick}>

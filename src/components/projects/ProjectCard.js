@@ -25,11 +25,15 @@ const Box = styled.a`
 `;
 
 const BoxImage = styled.img`
-  width: 2000x;
+  width: 300px;
   height: 200px;
   object-fit: cover;
   border: 2px solid #eeeeee;
   border-radius: 4px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 const BoxDetail = styled.div`
@@ -53,7 +57,7 @@ const TopBox = styled.div`
 
   @media (max-width: 767px) {
     gap: 8px;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `;
 
@@ -72,6 +76,7 @@ const Title = styled.div`
 const LinkBox = styled.div`
   display: flex;
   width: fit-content;
+  align-items: center;
   gap: 12px;
 
   @media (max-width: 767px) {
@@ -85,6 +90,8 @@ const Detail = styled.div`
 `;
 
 const IconLink = styled.img`
+  display: flex;
+  align-items: center;
   width: 24px;
   height: 24px;
 
@@ -106,6 +113,7 @@ const GithubLink = styled.a`
   padding: 1px 8px;
   border-radius: 8px;
   font-size: 13px;
+  white-space: nowrap;
 
   @media (hover: hover) {
     &:hover {
@@ -139,9 +147,9 @@ export default function ProjectCard({ data, color }) {
         <TopBox>
           <Title>{data.name}</Title>
           <LinkBox>
-            {data.store.map((ref) => (
+            {data.store.map((ref, i) => (
               <a
-                key={ref.type}
+                key={i}
                 href={ref.link}
                 target="_blank"
                 rel="noreferrer"
@@ -149,6 +157,7 @@ export default function ProjectCard({ data, color }) {
                 <IconLink
                   src={require(`../../resouses/projects/icon-link/${ref.type}.svg`)}
                   alt={`${ref.type} icon`}
+                  key={i}
                 />
               </a>
             ))}
@@ -163,8 +172,8 @@ export default function ProjectCard({ data, color }) {
         </TopBox>
         <Detail>{data.detail}</Detail>
         <TagBox>
-          {data.tag.map((tag) => (
-            <Tag $color={color}>{tag}</Tag>
+          {data.tag.map((tag, i) => (
+            <Tag $color={color} key={i}>{tag}</Tag>
           ))}
         </TagBox>
       </BoxDetail>

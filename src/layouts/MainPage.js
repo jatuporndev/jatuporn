@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import { React, useEffect, useState } from "react";
 import Projects from "../components/projects/Projects";
 import { getColor } from "../utility/utility";
+import Footer from "../components/footer/Footer";
 
 function MainPage(props) {
   let color = getColor()
@@ -27,6 +28,7 @@ function MainPage(props) {
       <Content colorCard={colorCard} setColorCard={setColorCard}></Content>
       <MySkill></MySkill>
       <Projects colorCard={colorCard}></Projects>
+      <Footer></Footer>
     </>
   );
 }
