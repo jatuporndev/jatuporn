@@ -30,14 +30,11 @@ const ScrollIcon = styled.img`
 `
 
 function Content(props) {
-  let icon = localStorage.getItem("icon");
-  if (!icon) icon = "cat.png";
-
-  const [iconCard, setIconCard] = useState(icon);
   const { colorCard, setColorCard } = props;
+  const { iconCard, setIconCard } = props;
 
   function onClick(e) {
-    const id = 'myskill';
+    const id = 'about';
     const yOffset = -120; 
     const element = document.getElementById(id);
     const y = element.getBoundingClientRect().top + window.scrollY + yOffset;

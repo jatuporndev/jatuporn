@@ -3,12 +3,14 @@ import styled from "styled-components";
 import githubIcon from "../../resouses/footer/github.svg";
 import igIcon from "../../resouses/footer/instagram.svg";
 import linkinIcon from "../../resouses/footer/linkedin.svg";
+import emailIcon from "../../resouses/footer/email.svg";
+
 
 const FooterBox = styled.div`
   margin-top: 42px;
   background-color: #f5f5f5;
   height: auto;
-  padding: 18px;
+  padding: 24px;
 `;
 
 const Content = styled.div`
@@ -17,8 +19,8 @@ const Content = styled.div`
   font-weight: 100;
   color: #616161;
   font-size: 14px;
-  margin-bottom: 2px;
   text-decoration: none;
+  margin-bottom: 2px;
 `;
 
 const GropLink = styled.div`
@@ -26,11 +28,12 @@ const GropLink = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 16px;
+  margin-top: 2px;
 `;
 
 const IconSocial = styled.img`
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   filter: grayscale(1);
 `;
 
@@ -60,6 +63,12 @@ export default function Footer() {
           target="_blank"
         >
           <IconSocial src={linkinIcon} alt={`linkin`}></IconSocial>
+        </a>
+        <a
+          href="mailto:jatuporn.saenthip@gmail.co"
+          target="_blank"
+        >
+          <IconSocial src={emailIcon} alt={`email`}></IconSocial>
         </a>
       </GropLink>
       <Content>

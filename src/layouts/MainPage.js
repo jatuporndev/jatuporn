@@ -3,13 +3,18 @@ import MySkill from "../components/my-skill/MySkill";
 import NavBar from "../components/NavBar";
 import { React, useEffect, useState } from "react";
 import Projects from "../components/projects/Projects";
-import { getColor } from "../utility/utility";
+import { getColor, getLogo } from "../utility/utility";
 import Footer from "../components/footer/Footer";
+import About from "../components/about/About";
 
 function MainPage(props) {
-  let color = getColor()
-  const [isScrolled, setIsScrolled] = useState(false);
+  let color = getColor();
+  let icon = getLogo();
+
   const [colorCard, setColorCard] = useState(color);
+  const [iconCard, setIconCard] = useState(icon);
+
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +30,13 @@ function MainPage(props) {
   return (
     <>
       <NavBar isScrolled={isScrolled}></NavBar>
-      <Content colorCard={colorCard} setColorCard={setColorCard}></Content>
+      <Content
+        colorCard={colorCard}
+        setColorCard={setColorCard}
+        iconCard={iconCard}
+        setIconCard={setIconCard}
+      ></Content>
+      <About iconCard={iconCard}></About>
       <MySkill></MySkill>
       <Projects colorCard={colorCard}></Projects>
       <Footer></Footer>
