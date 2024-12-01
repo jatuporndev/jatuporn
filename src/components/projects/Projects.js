@@ -12,7 +12,7 @@ const MainDiv = styled.div`
 `;
 
 const TitleText = styled.div`
-  width: 60%;
+  width: 70%;
   margin: auto;
   font-size: 24px;
   font-weight: bold;
@@ -34,7 +34,7 @@ const Box = styled.div`
   padding-top: 24px;
   padding-bottom: 64px;
   height: auto;
-  width: 60%;
+  width: 70%;
   margin: auto;
   display: flex;
   flex-direction: column;
