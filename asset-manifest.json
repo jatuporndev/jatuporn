@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/jatuporn/static/js/main.18a7ae86.js",
+    "main.js": "/jatuporn/static/js/main.e2e7be34.js",
     "static/js/453.aacf0a26.chunk.js": "/jatuporn/static/js/453.aacf0a26.chunk.js",
     "static/media/profile3.jpg": "/jatuporn/static/media/profile3.dc4fc04262a90ae69d48.jpg",
     "static/media/can-scroll.gif": "/jatuporn/static/media/can-scroll.359b98a1ad85f8fc651e.gif",
@@ -27,14 +27,17 @@
     "static/media/play-store.svg": "/jatuporn/static/media/play-store.0ab5c0515debb498595c.svg",
     "static/media/swift.svg": "/jatuporn/static/media/swift.86f5e09ea16bda6487fe.svg",
     "static/media/firebase.svg": "/jatuporn/static/media/firebase.8f69a13150a1594d8fb7.svg",
+    "static/media/db.svg": "/jatuporn/static/media/db.9455f2f2bd26c88b5bb3.svg",
     "static/media/flutter.svg": "/jatuporn/static/media/flutter.9a496ae25b064ea25261.svg",
     "static/media/linkedin.svg": "/jatuporn/static/media/linkedin.fad6cb3b7ce0a6b6474fa2bc8ce52bc7.svg",
     "static/media/docker.svg": "/jatuporn/static/media/docker.402471a8309d58457b24.svg",
+    "static/media/email.svg": "/jatuporn/static/media/email.d4594538fa464f38ff6c4f4661431ef2.svg",
+    "static/media/apollographql.svg": "/jatuporn/static/media/apollographql.2420006b30713cfd0609.svg",
     "index.html": "/jatuporn/index.html",
-    "main.18a7ae86.js.map": "/jatuporn/static/js/main.18a7ae86.js.map",
+    "main.e2e7be34.js.map": "/jatuporn/static/js/main.e2e7be34.js.map",
     "453.aacf0a26.chunk.js.map": "/jatuporn/static/js/453.aacf0a26.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.18a7ae86.js"
+    "static/js/main.e2e7be34.js"
   ]
 }
