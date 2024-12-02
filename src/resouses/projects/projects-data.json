@@ -1,14 +1,14 @@
 [
     {
-        "name": "project name",
-        "key_image": "portfolio-1.jpg",
-        "link": "https://stackoverflow.com/questions/5868850/creating-list-of-objects-in-javascript",
-        "tag": ["Android", "Kotlin", "MVVM", "Android", "Kotlin", "MVVM"],
-        "detail": "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text eversince the 1500s.",
+        "name": "Jellylist",
+        "key_image": "jellylist.png",
+        "link": "https://github.com/jatuporndev/jellyfish-checklist",
+        "tag": ["Flutter", "Bloc", "Firebase", "Firestore"],
+        "detail": "Todo list with sharing list with you friend realtime update list using Firebase fireStore, develop in flutter with Bloc architecture.",
         "store": [
             {
                 "type": "app-store",
-                "link" : "https://www.youtube.com/watch?v=_b7OanWbpjU&list=RDVMM1X8aXlCs&index=27&ab_channel=Muse-Topic"
+                "link" : "https://apps.apple.com/th/app/jellylist/id6478496369?platform=iphone"
             }
         ]
     },
@@ -34,20 +34,24 @@
         ]
     },
     {
-        "name": "project name",
-        "key_image": "portfolio-1.jpg",
-        "link": "https://stackoverflow.com/questions/5868850/creating-list-of-objects-in-javascript",
-        "tag": ["Android", "Kotlin", "MVVM"],
-        "detail": "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text eversince the 1500s.",
+        "name": "Scrum Poker",
+        "key_image": "scrumpoker.png",
+        "link": "https://github.com/jatuporndev/shalltear",
+        "tag": ["Flutter", "Firebase", "Realtime Database"],
+        "detail": "Real time Poker number complex using realtime database in frebase store create lobby and join. with flutter.",
         "store": [
             {
-                "type": "app-store",
-                "link" : "https://www.youtube.com/watch?v=_b7OanWbpjU&list=RDVMM1X8aXlCs&index=27&ab_channel=Muse-Topic"
-            },
-            {
                 "type": "play-store",
-                "link" : "https://www.youtube.com/watch?v=_b7OanWbpjU&list=RDVMM1X8aXlCs&index=27&ab_channel=Muse-Topic"
+                "link" : "https://play.google.com/store/apps/details?id=com.yny.shalltear.shalltear&hl=en"
             }
         ]
+    },
+    {
+        "name": "Loan Project",
+        "key_image": "portfolio-1.jpg",
+        "link": "https://github.com/jatuporndev/Aloan_Android",
+        "tag": ["Kotlin", "Android", "Rest API", "MySQL"],
+        "detail": "This is my final project from my college using android koltin about loan system use backend api with PHP and MySQL",
+        "store": []
     }
 ]

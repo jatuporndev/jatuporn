@@ -25,11 +25,13 @@ const Box = styled.a`
 `;
 
 const BoxImage = styled.img`
-  width: 300px;
-  height: 200px;
+  width: 300px; 
+  height: 200px; 
   object-fit: cover;
   border: 2px solid #eeeeee;
   border-radius: 4px;
+  min-width: 300px;
+  min-height: 200px;
 
   @media (max-width: 767px) {
     width: 100%;
