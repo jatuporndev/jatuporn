@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.js": "/jatuporn/static/js/main.af455fde.js",
+    "main.js": "/jatuporn/static/js/main.1964c6de.js",
     "static/js/453.aacf0a26.chunk.js": "/jatuporn/static/js/453.aacf0a26.chunk.js",
     "static/media/can-scroll.gif": "/jatuporn/static/media/can-scroll.359b98a1ad85f8fc651e.gif",
     "static/media/profile3.jpg": "/jatuporn/static/media/profile3.6c0f6c6b3b9f01448443.jpg",
     "static/media/portfolio-1.jpg": "/jatuporn/static/media/portfolio-1.61d3c6c03c5865ac6ec6.jpg",
     "static/media/portfolio-4.jpg": "/jatuporn/static/media/portfolio-4.a13930af87f7f2d5112c.jpg",
+    "static/media/jellylist.png": "/jatuporn/static/media/jellylist.25bde0fc5f2719139f90.png",
     "static/media/portfolio-project.png": "/jatuporn/static/media/portfolio-project.c07e8c2b668f1e5bbaf6.png",
+    "static/media/scrumpoker.png": "/jatuporn/static/media/scrumpoker.3252ed6da7e8c0b49a9a.png",
     "static/media/car-ramen.png": "/jatuporn/static/media/car-ramen.8b8afbe5e9d7782029a8.png",
     "static/media/cat.png": "/jatuporn/static/media/cat.5fe688ba35a399391321.png",
     "static/media/cat-eat.jpg": "/jatuporn/static/media/cat-eat.d4e44221b1e2bbe39906.jpg",
@@ -34,10 +36,10 @@
     "static/media/email.svg": "/jatuporn/static/media/email.d4594538fa464f38ff6c4f4661431ef2.svg",
     "static/media/apollographql.svg": "/jatuporn/static/media/apollographql.2420006b30713cfd0609.svg",
     "index.html": "/jatuporn/index.html",
-    "main.af455fde.js.map": "/jatuporn/static/js/main.af455fde.js.map",
+    "main.1964c6de.js.map": "/jatuporn/static/js/main.1964c6de.js.map",
     "453.aacf0a26.chunk.js.map": "/jatuporn/static/js/453.aacf0a26.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.af455fde.js"
+    "static/js/main.1964c6de.js"
   ]
 }
