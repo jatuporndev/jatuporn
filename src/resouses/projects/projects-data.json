@@ -47,10 +47,34 @@
         ]
     },
     {
+        "name": "NowChass (Thai Chass)",
+        "key_image": "nowchassprject.png",
+        "link": "https://github.com/jatuporndev/nowchess",
+        "tag": ["Flutter", "Firebase", "Realtime Database"],
+        "detail": "Real-time Chess Battle! 🏆 Thai Rules vs Duo Mode in Flutter with firebase realtime database",
+        "store": []
+    },
+    {
+        "name": "Thailand Covid Checker",
+        "key_image": "covidapp.jpg",
+        "link": "https://github.com/jatuporndev/covid19TH_app",
+        "tag": ["Kotlin", "MVVM", "Rest API"],
+        "detail": "Android Kotlin App with MVVM Architecture: Stay Updated with Daily COVID-19 Reports!  Using Real-Time Data from กรมควบคุมโรค ",
+        "store": []
+    },
+    {
+        "name": "NowGames Project",
+        "key_image": "nowgameproject.png",
+        "link": "https://github.com/jatuporndev/nowgame",
+        "tag": ["Flutter", "Firebase", "Rest API"],
+        "detail": "Build an Engaging Flutter App Using Free REST API Integrate Data from FreeToGame.com's Free API for Game Information ",
+        "store": []
+    },
+    {
         "name": "Loan Project",
         "key_image": "portfolio-1.jpg",
         "link": "https://github.com/jatuporndev/Aloan_Android",
-        "tag": ["Kotlin", "Android", "Rest API", "MySQL"],
+        "tag": ["Kotlin", "Android", "Rest API", "MySQL", "PHP Backend"],
         "detail": "This is my final project from my college using android koltin about loan system use backend api with PHP and MySQL",
         "store": []
     }
