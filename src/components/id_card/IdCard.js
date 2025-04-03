@@ -58,9 +58,10 @@ const Icon = styled.img`
   height: 28px;
   border-radius: 50%;
   border: 1px solid black;
-  object-fit: contain;
+  object-fit: cover;
   padding: 1px;
   background-color: white;
+  overflow-clip-margin: unset;
 `;
 
 const TextTitle = styled.div`

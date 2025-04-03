@@ -38,6 +38,7 @@ function LogoChanger(props) {
     "car-ramen.png",
     "cat-ah.png",
     "fish.png",
+    "cat-see.jpg", 
   ];
 
   return (

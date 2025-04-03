@@ -57,7 +57,7 @@ function NavBar({ isScrolled }) {
       <Box>
         <HeaderContainer>
           <HeaderTitle onClick={() => console.log("test")}>JATUPORN</HeaderTitle>
-          <SubTitle>Healthcheck</SubTitle>
+          <SubTitle>healthcheck</SubTitle>
         </HeaderContainer>
         <a
           target="_blank"
