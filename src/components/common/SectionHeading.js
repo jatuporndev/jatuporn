@@ -3,12 +3,29 @@ import styled from "styled-components";
 
 const HeadingWrap = styled.div`
   margin-bottom: 28px;
+
+  @media (max-width: 767px) {
+    ${(p) =>
+      p.$centerOnMobile &&
+      `
+      display: flex;
+      justify-content: center;
+    `}
+  }
 `;
 
 const TitleBlock = styled.div`
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: 767px) {
+    ${(p) =>
+      p.$centerOnMobile &&
+      `
+      align-items: center;
+    `}
+  }
 `;
 
 const TitleText = styled.h2`
@@ -34,10 +51,15 @@ const TitleRule = styled.div`
  * Shared section title + accent line (aligned with SectionInner column).
  * Do not use for About — that section stays custom.
  */
-export default function SectionHeading({ id, accentColor, children }) {
+export default function SectionHeading({
+  id,
+  accentColor,
+  children,
+  centerOnMobile,
+}) {
   return (
-    <HeadingWrap>
-      <TitleBlock>
+    <HeadingWrap $centerOnMobile={centerOnMobile}>
+      <TitleBlock $centerOnMobile={centerOnMobile}>
         <TitleText id={id}>{children}</TitleText>
         <TitleRule $color={accentColor} />
       </TitleBlock>
