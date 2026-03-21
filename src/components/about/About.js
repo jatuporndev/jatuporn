@@ -12,8 +12,28 @@ const Box = styled.div`
   justify-content: center;
 `;
 
-const Title = styled(Box)`
-  margin-bottom: 4px;
+const TitleWrap = styled.div`
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+`;
+
+const Title = styled.div`
+  font-weight: 600;
+  font-size: 24px;
+  font-family: "Pangolin", sans-serif;
+  color: #212121;
+  text-align: center;
+`;
+
+const TitleRule = styled.div`
+  width: min(5.25rem, 46%);
+  min-width: 3rem;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background-color: ${(props) => props.$color || "#e0e0e0"};
 `;
 
 const BoxDetail = styled(Box)`
@@ -30,16 +50,23 @@ const Cat = styled.img`
     overflow-clip-margin: unset;
 `;
 
-export default function About ({ iconCard }) {
+export default function About({ iconCard, accentColor }) {
   return (
     <AboutContrainer id="about">
       <Box>
         <Cat src={require(`../../resouses/icon-card/${iconCard}`)}></Cat>
       </Box>
-      <Title>Software Engineer</Title>
+      <Box>
+        <TitleWrap>
+          <Title>Software Engineer</Title>
+          <TitleRule $color={accentColor} />
+        </TitleWrap>
+      </Box>
       <BoxDetail>
-        Mobile Developer | Full Stack Developer, Graduated in Computer Science
-        from RMUTTO CPC.
+        3 years experience as a Mobile Developer and Full Stack Developer.
+      </BoxDetail>
+      <BoxDetail>
+        Graduated in Computer Science from RMUTTO CPC.
       </BoxDetail>
       <BoxDetail>
         I develop things as a Software Engineer and am also passionate about UX

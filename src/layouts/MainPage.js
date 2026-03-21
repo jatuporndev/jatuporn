@@ -6,6 +6,7 @@ import Projects from "../components/projects/Projects";
 import { getColor, getLogo } from "../utility/utility";
 import Footer from "../components/footer/Footer";
 import About from "../components/about/About";
+import Experience from "../components/experience/Experience";
 
 function MainPage(props) {
   let color = getColor();
@@ -36,8 +37,9 @@ function MainPage(props) {
         iconCard={iconCard}
         setIconCard={setIconCard}
       ></Content>
-      <About iconCard={iconCard}></About>
-      <MySkill></MySkill>
+      <About iconCard={iconCard} accentColor={colorCard}></About>
+      <MySkill accentColor={colorCard}></MySkill>
+      <Experience accentColor={colorCard} />
       <Projects colorCard={colorCard}></Projects>
       <Footer></Footer>
     </>

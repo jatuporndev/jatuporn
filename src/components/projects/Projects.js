@@ -3,77 +3,85 @@ import styled from "styled-components";
 import projectData from "../../resouses/projects/projects-data.json";
 import ProjectCard from "./ProjectCard";
 import { DoneBtn } from "../../styled/button";
+import { SectionInner } from "../../styles/sectionLayout";
+import SectionHeading from "../common/SectionHeading";
 
-const MainDiv = styled.div`
+const MainDiv = styled.section`
   height: auto;
   max-width: 100%;
-  padding-top: 48px;
-  align-items: center;
-`;
-
-const TitleText = styled.div`
-  width: 70%;
-  margin: auto;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Pangolin";
-  transition: all 0.3s ease;
-
-  @media (max-width: 1024px) {
-    width: 80%; 
-  }
+  padding: 56px 0 72px;
+  background: linear-gradient(180deg, #fafafa 0%, #ffffff 32%, #ffffff 100%);
+  box-sizing: border-box;
 
   @media (max-width: 767px) {
-    width: 85%;
- 
+    padding: 40px 0 56px;
   }
+`;
 
+const ProjectsInner = styled(SectionInner)`
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
 `;
 
 const Box = styled.div`
-  padding-top: 24px;
-  padding-bottom: 64px;
-  height: auto;
-  width: 70%;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 38px;
-
-  @media (max-width: 1024px) {
-    width: 80%;
-  }
+  gap: 28px;
 
   @media (max-width: 767px) {
-    width: 100%;
-    gap: 48px;
+    gap: 32px;
+  }
+`;
+
+const MoreWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+
+  @media (max-width: 767px) {
+    margin-top: 8px;
+    padding-bottom: 8px;
   }
 `;
 
 const More = styled(DoneBtn)`
-  margin-top: 8px;
+  min-width: 160px;
+
+  @media (max-width: 767px) {
+    min-width: 200px;
+    width: 100%;
+    max-width: 280px;
+  }
 `;
 
 export default function Projects(props) {
-  let color = props.colorCard
+  const color = props.colorCard;
 
-  function onClick(e) {
-    const url = 'https://github.com/jatuporndev?tab=repositories';
-    window.open(url, '_blank');
+  function onClick() {
+    const url = "https://github.com/jatuporndev?tab=repositories";
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
   return (
-    <MainDiv>
-      <TitleText>PROJECTS</TitleText>
-      <Box>
-        {projectData.map((data, i) => (
-          <ProjectCard color={color} data={data} key={i}></ProjectCard>
-        ))}
-
-        <More $color={color} onClick={onClick}>
-          VIEW MORE
-        </More>
-      </Box>
+    <MainDiv id="projects" aria-labelledby="projects-heading">
+      <ProjectsInner>
+        <SectionHeading id="projects-heading" accentColor={color}>
+          PROJECTS
+        </SectionHeading>
+        <Box>
+          {projectData.map((data, i) => (
+            <ProjectCard color={color} data={data} key={data.name || i} />
+          ))}
+          <MoreWrap>
+            <More $color={color} type="button" onClick={onClick}>
+              VIEW MORE
+            </More>
+          </MoreWrap>
+        </Box>
+      </ProjectsInner>
     </MainDiv>
   );
 }

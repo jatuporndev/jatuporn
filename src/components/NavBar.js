@@ -12,6 +12,7 @@ const Container = styled.div`
 `;
 
 const Box = styled.div`
+  position: relative;
   padding: 0 24px;
   padding-top: 24px;
   padding-bottom: 12px;
@@ -30,6 +31,37 @@ const HeaderTitle = styled.div`
   font-weight: 600;
   font-size: 36px;
   font-family: "Pangolin";
+`;
+
+const NavLinks = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 10px;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
+
+const NavLinkButton = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: "Pangolin";
+  font-size: 14px;
+  color: #424242;
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 const NavIcon = styled.img`
@@ -52,13 +84,53 @@ const UnderLine = styled.div`
 `;
 
 function NavBar({ isScrolled }) {
+  function scrollToId(id) {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    // Offset for the fixed header.
+    const yOffset = -110;
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+
   return (
     <Container>
       <Box>
         <HeaderContainer>
-          <HeaderTitle onClick={() => console.log("test")}>JATUPORN</HeaderTitle>
+          <HeaderTitle onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            JATUPORN
+          </HeaderTitle>
           <SubTitle>healthcheck</SubTitle>
         </HeaderContainer>
+
+        <NavLinks>
+          <NavLinkButton
+            type="button"
+            onClick={() => scrollToId("about")}
+          >
+            ABOUT
+          </NavLinkButton>
+          <NavLinkButton
+            type="button"
+            onClick={() => scrollToId("myskill")}
+          >
+            SKILLS
+          </NavLinkButton>
+          <NavLinkButton
+            type="button"
+            onClick={() => scrollToId("experience")}
+          >
+            EXPERIENCE
+          </NavLinkButton>
+          <NavLinkButton
+            type="button"
+            onClick={() => scrollToId("projects")}
+          >
+            PROJECTS
+          </NavLinkButton>
+        </NavLinks>
+
         <a
           target="_blank"
           rel="noreferrer"

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import IdCard from "../id_card/IdCard";
 import ColorChanger from "../color-changer/ColorChanger";
@@ -12,6 +11,7 @@ const MainContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @media (max-height: 430px) {
     height: auto;
     padding: 24px 0;
@@ -51,7 +51,12 @@ function Content(props) {
         setColorCard={setColorCard}
       ></ColorChanger>
       <LogoChanger iconCard={iconCard} setIconCard={setIconCard}></LogoChanger>
-      <Done $color={colorCard} onClick={onClick}>NEXT</Done>
+      <Done
+        $color={colorCard}
+        onClick={onClick}
+      >
+        NEXT
+      </Done>
       <ScrollIcon src={require("../../resouses/utility/can-scroll.gif")}></ScrollIcon>
     </MainContent>
   );

@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple .NET-style mark (used as a placeholder icon) -->
+  <rect x="8" y="8" width="48" height="48" rx="10" fill="#512BD4"/>
+  <path d="M32 16L44 24V40L32 48L20 40V24L32 16Z" fill="#ffffff" opacity="0.92"/>
+  <path d="M25 28L32 23L39 28V36L32 41L25 36V28Z" fill="#512BD4"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff">.NET</text>
+</svg>
