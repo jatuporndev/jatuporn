@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+  html, body {
+    overflow-x: hidden;
+  }
+
   body {
     margin: 0;
     font-family: 'Kanit', 'Pangolin', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
