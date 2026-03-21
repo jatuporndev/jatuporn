@@ -25,7 +25,7 @@ const LogoMain = styled.div`
   margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 14px;
   row-gap: 8px;
 `;
 
@@ -38,6 +38,7 @@ function LogoChanger(props) {
     "car-ramen.png",
     "cat-ah.png",
     "fish.png",
+    "cat-see.jpg", 
   ];
 
   return (
