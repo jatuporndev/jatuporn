@@ -21,3 +21,9 @@ export function getLogo() {
     if (!icon) icon = "cat.png";
     return icon
 }
+
+export function getProfile() {
+    let profile = localStorage.getItem("profile");
+    if (!profile) profile = "profile3.jpg";
+    return profile
+}

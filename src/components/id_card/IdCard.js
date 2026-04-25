@@ -100,6 +100,7 @@ const LeftDetail = styled.div`
 `;
 
 const ProfileImage = styled.img`
+  display: block;
   width: 110px;
   height: 150px;
   border-radius: 1px;
@@ -341,7 +342,7 @@ function clamp(n, min, max) {
 }
 
 function IdCard(props) {
-  const { colorCard, iconCard } = props;
+  const { colorCard, iconCard, profileCard } = props;
   const barcodeValue = "jatuporndev";
   const securityToken = useMemo(() => buildContactSecurityToken(EMAIL), []);
 
@@ -459,7 +460,7 @@ function IdCard(props) {
           <MainCard $color={colorCard}>
             <LeftDetail>
               <ProfileImage
-                src={require("../../resouses/profile/profile3.jpg")}
+                src={require(`../../resouses/profile/${profileCard}`)}
                 alt="profile"
                 title="profile"
               />

@@ -3,7 +3,7 @@ import MySkill from "../components/my-skill/MySkill";
 import NavBar from "../components/NavBar";
 import { React, useEffect, useState } from "react";
 import Projects from "../components/projects/Projects";
-import { getColor, getLogo } from "../utility/utility";
+import { getColor, getLogo, getProfile } from "../utility/utility";
 import Footer from "../components/footer/Footer";
 import About from "../components/about/About";
 import Experience from "../components/experience/Experience";
@@ -11,9 +11,11 @@ import Experience from "../components/experience/Experience";
 function MainPage(props) {
   let color = getColor();
   let icon = getLogo();
+  let profile = getProfile();
 
   const [colorCard, setColorCard] = useState(color);
   const [iconCard, setIconCard] = useState(icon);
+  const [profileCard, setProfileCard] = useState(profile);
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -36,6 +38,8 @@ function MainPage(props) {
         setColorCard={setColorCard}
         iconCard={iconCard}
         setIconCard={setIconCard}
+        profileCard={profileCard}
+        setProfileCard={setProfileCard}
       ></Content>
       <About iconCard={iconCard} accentColor={colorCard}></About>
       <MySkill accentColor={colorCard}></MySkill>
