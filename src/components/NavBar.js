@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo from "../resouses/github.svg";
+import { BORDER_COLOR, TEXT_COLOR } from "../utility/utility";
 
 const Container = styled.div`
   position: fixed;
@@ -19,7 +20,12 @@ const Box = styled.div`
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  background-color: white;
+  background-color: rgba(255, 254, 248, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid ${(props) => (props.$isScrolled ? BORDER_COLOR : "transparent")};
+  box-shadow: ${(props) =>
+    props.$isScrolled ? "0 6px 18px rgba(70, 55, 25, 0.035)" : "none"};
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 `;
 
 const HeaderContainer = styled.div`
@@ -31,6 +37,7 @@ const HeaderTitle = styled.div`
   font-weight: 600;
   font-size: 36px;
   font-family: "Pangolin";
+  color: ${TEXT_COLOR};
 `;
 
 const NavLinks = styled.div`
@@ -55,7 +62,7 @@ const NavLinkButton = styled.button`
   cursor: pointer;
   font-family: "Pangolin";
   font-size: 14px;
-  color: #424242;
+  color: ${TEXT_COLOR};
 
   @media (hover: hover) {
     &:hover {
@@ -72,13 +79,14 @@ const NavIcon = styled.img`
 const SubTitle = styled.div`
   font-size: 12px;
   line-height: 12px;
+  color: #6f6a60;
 `;
 
 const UnderLine = styled.div`
   width: ${(props) => (props.$isScrolled ? "100%" : "0%")};
   margin: 0 auto; 
   height: 2px;
-  background-color: #e0e0e0;
+  background-color: ${BORDER_COLOR};
   transition: ${(props) => (props.$isScrolled ? 'width 1500ms' : 'width 700ms')};
 
 `;
@@ -96,7 +104,7 @@ function NavBar({ isScrolled }) {
 
   return (
     <Container>
-      <Box>
+      <Box $isScrolled={isScrolled}>
         <HeaderContainer>
           <HeaderTitle onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             JATUPORN

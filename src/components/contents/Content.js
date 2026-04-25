@@ -3,6 +3,7 @@ import IdCard from "../id_card/IdCard";
 import ColorChanger from "../color-changer/ColorChanger";
 import LogoChanger from "../logo-changer/LogoChanger";
 import { DoneBtn } from "../../styled/button";
+import { setBackgroundColor } from "../../utility/utility";
 
 const MainContent = styled.div`
   max-width: 100%;
@@ -11,6 +12,7 @@ const MainContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${setBackgroundColor()}
 
   @media (max-height: 430px) {
     height: auto;

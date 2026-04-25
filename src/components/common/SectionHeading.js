@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { TEXT_COLOR } from "../../utility/utility";
 
 const HeadingWrap = styled.div`
   margin-bottom: 28px;
@@ -34,8 +35,8 @@ const TitleText = styled.h2`
   font-size: 24px;
   font-weight: bold;
   font-family: "Pangolin", sans-serif;
-  color: #212121;
-  letter-spacing: 0.02em;
+  color: ${TEXT_COLOR};
+  letter-spacing: 0;
 `;
 
 const TitleRule = styled.div`

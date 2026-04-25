@@ -3,12 +3,14 @@ import styled from "styled-components";
 import TechBox from "./view/TechBox";
 import { SectionInner } from "../../styles/sectionLayout";
 import SectionHeading from "../common/SectionHeading";
+import { setBackgroundColor } from "../../utility/utility";
 
 const MySkillMain = styled.div`
   height: auto;
   width: 100%;
   padding: 0 0 56px;
   box-sizing: border-box;
+  ${setBackgroundColor()}
 `;
 
 const TechBoxContainer = styled.div`

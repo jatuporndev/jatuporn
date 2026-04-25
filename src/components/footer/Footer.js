@@ -5,12 +5,21 @@ import githubIcon from "../../resouses/footer/github.svg";
 import igIcon from "../../resouses/footer/instagram.svg";
 import linkinIcon from "../../resouses/footer/linkedin.svg";
 import emailIcon from "../../resouses/footer/email.svg";
+import {
+  BORDER_COLOR,
+  SOFT_SURFACE_COLOR,
+  SURFACE_COLOR,
+  TEXT_COLOR,
+  MUTED_TEXT_COLOR,
+  setBackgroundColor,
+} from "../../utility/utility";
 
 const EMAIL = "jatuporn.saenthip@gmail.com";
 
 const FooterBox = styled.footer`
   margin-top: 42px;
-  background-color: #f5f5f5;
+  ${setBackgroundColor()}
+  border-top: 1px solid ${BORDER_COLOR};
   padding: 16px 14px 18px;
   box-sizing: border-box;
 `;
@@ -76,8 +85,8 @@ const EmailPill = styled.div`
   width: 100%;
   height: 28px;
   border-radius: 8px;
-  border: 1px solid #e8e8e8;
-  background: #fafafa;
+  border: 1px solid ${BORDER_COLOR};
+  background: ${SOFT_SURFACE_COLOR};
   overflow: hidden;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
@@ -91,7 +100,7 @@ const EmailLink = styled.a`
   height: 28px;
   padding: 0 4px 0 8px;
   text-decoration: none;
-  color: #616161;
+  color: ${MUTED_TEXT_COLOR};
   font-size: 11px;
   font-weight: 400;
   line-height: 28px;
@@ -102,7 +111,7 @@ const EmailLink = styled.a`
 
   @media (hover: hover) {
     &:hover {
-      color: #424242;
+      color: ${TEXT_COLOR};
       text-decoration: underline;
       text-underline-offset: 2px;
     }
@@ -120,22 +129,22 @@ const CopyEmailButton = styled.button`
   margin: 0;
   padding: 0;
   border: none;
-  border-left: 1px solid #e8e8e8;
-  background: #fff;
+  border-left: 1px solid ${BORDER_COLOR};
+  background: ${SURFACE_COLOR};
   cursor: pointer;
-  color: #757575;
+  color: ${MUTED_TEXT_COLOR};
   transition: color 0.15s ease, background 0.15s ease;
 
   @media (hover: hover) {
     &:hover {
-      color: #212121;
-      background: #f0f0f0;
+      color: ${TEXT_COLOR};
+      background: ${SOFT_SURFACE_COLOR};
     }
   }
 
   &:focus-visible {
     outline: none;
-    box-shadow: inset 0 0 0 2px #9e9e9e;
+    box-shadow: inset 0 0 0 2px ${MUTED_TEXT_COLOR};
   }
 `;
 
@@ -155,7 +164,7 @@ const Copyright = styled.p`
   margin: 2px 0 0;
   font-weight: 300;
   font-size: 11px;
-  color: #9e9e9e;
+  color: ${MUTED_TEXT_COLOR};
   letter-spacing: 0.02em;
   text-align: center;
   line-height: 1.35;
