@@ -3,12 +3,14 @@ import styled from "styled-components";
 import TechBox from "./view/TechBox";
 import { SectionInner } from "../../styles/sectionLayout";
 import SectionHeading from "../common/SectionHeading";
+import { setBackgroundColor } from "../../utility/utility";
 
 const MySkillMain = styled.div`
   height: auto;
   width: 100%;
   padding: 0 0 56px;
   box-sizing: border-box;
+  ${setBackgroundColor()}
 `;
 
 const TechBoxContainer = styled.div`
@@ -18,6 +20,10 @@ const TechBoxContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
+
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
 `;
 
 function MySkill({ accentColor }) {
@@ -40,7 +46,9 @@ function MySkill({ accentColor }) {
   return (
     <MySkillMain id="myskill">
       <SectionInner>
-        <SectionHeading accentColor={accentColor}>TECH SKILL</SectionHeading>
+        <SectionHeading accentColor={accentColor} centerOnMobile>
+          TECH SKILL
+        </SectionHeading>
         <TechBoxContainer>
           {techBoxList.map((item, index) => (
             <TechBox

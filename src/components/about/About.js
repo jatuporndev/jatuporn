@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { setBackgroundColor } from "../../utility/utility";
 
 const AboutContrainer = styled.div`
   height: auto;
   margin-bottom: 64px;
   padding: 16px;
+  ${setBackgroundColor()}
 `;
 
 const Box = styled.div`

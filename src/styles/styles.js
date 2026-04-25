@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { setBackgroundColor, TEXT_COLOR } from "../utility/utility";
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -7,6 +8,8 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+    ${setBackgroundColor()}
+    color: ${TEXT_COLOR};
     font-family: 'Kanit', 'Pangolin', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;

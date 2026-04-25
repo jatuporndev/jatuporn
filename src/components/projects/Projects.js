@@ -5,12 +5,13 @@ import ProjectCard from "./ProjectCard";
 import { DoneBtn } from "../../styled/button";
 import { SectionInner } from "../../styles/sectionLayout";
 import SectionHeading from "../common/SectionHeading";
+import { setBackgroundColor } from "../../utility/utility";
 
 const MainDiv = styled.section`
   height: auto;
   max-width: 100%;
   padding: 56px 0 72px;
-  background: linear-gradient(180deg, #fafafa 0%, #ffffff 32%, #ffffff 100%);
+  ${setBackgroundColor()}
   box-sizing: border-box;
 
   @media (max-width: 767px) {

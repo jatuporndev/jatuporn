@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import {
+  BORDER_COLOR,
+  MUTED_TEXT_COLOR,
+  SOFT_SURFACE_COLOR,
+  TEXT_COLOR,
+} from "../../utility/utility";
 
 const CardRoot = styled.article`
   display: flex;
@@ -24,7 +30,8 @@ const ImageLink = styled.a`
   width: 300px;
   height: 200px;
   overflow: hidden;
-  background: #eeeeee;
+  background: transparent;
+  border: 1px solid ${BORDER_COLOR};
   text-decoration: none;
   color: inherit;
   box-sizing: border-box;
@@ -53,8 +60,11 @@ const BoxDetail = styled.div`
   padding: 20px 22px 22px;
   display: flex;
   flex-direction: column;
+  min-height: 200px;
+  box-sizing: border-box;
 
   @media (max-width: 767px) {
+    min-height: 0;
     padding: 18px 16px 20px;
   }
 `;
@@ -78,7 +88,7 @@ const TitleLink = styled.a`
   font-size: 22px;
   font-family: "Pangolin", sans-serif;
   text-decoration: none;
-  color: #212121;
+  color: ${TEXT_COLOR};
   line-height: 1.25;
 
   @media (max-width: 767px) {
@@ -88,7 +98,7 @@ const TitleLink = styled.a`
 
   @media (hover: hover) {
     &:hover {
-      color: #000000;
+      color: ${TEXT_COLOR};
       text-decoration: underline;
       text-underline-offset: 3px;
     }
@@ -121,7 +131,7 @@ const IconButton = styled.a`
 
   @media (hover: hover) {
     &:hover {
-      background: #f0f0f0;
+      background: ${SOFT_SURFACE_COLOR};
     }
   }
 `;
@@ -146,13 +156,13 @@ const GithubLink = styled.a`
   padding: 0 10px;
   text-decoration: none;
   color: #ffffff;
-  background-color: #212121;
+  background-color: ${TEXT_COLOR};
   border-radius: 8px;
   font-size: 11px;
   font-family: "Pangolin", sans-serif;
   font-weight: 500;
   white-space: nowrap;
-  border: 1px solid #212121;
+  border: 1px solid ${TEXT_COLOR};
   transition: background 0.2s ease, transform 0.15s ease;
 
   @media (max-width: 767px) {
@@ -164,8 +174,8 @@ const GithubLink = styled.a`
 
   @media (hover: hover) {
     &:hover {
-      background: #424242;
-      border-color: #424242;
+      background: #3b352b;
+      border-color: #3b352b;
     }
   }
 `;
@@ -175,7 +185,7 @@ const Detail = styled.p`
   padding: 0;
   font-size: 14px;
   line-height: 1.55;
-  color: #616161;
+  color: ${MUTED_TEXT_COLOR};
 
   @media (max-width: 767px) {
     margin-top: 12px;
@@ -200,7 +210,7 @@ const TagBox = styled.div`
 const Tag = styled.span`
   display: inline-block;
   background-color: ${(props) => props.$color};
-  color: #212121;
+  color: ${TEXT_COLOR};
   padding: 4px 10px;
   border-radius: 999px;
   font-size: 12px;

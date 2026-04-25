@@ -2,12 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { SectionInner } from "../../styles/sectionLayout";
 import SectionHeading from "../common/SectionHeading";
+import {
+  BORDER_COLOR,
+  MUTED_TEXT_COLOR,
+  SURFACE_COLOR,
+  TEXT_COLOR,
+  setBackgroundColor,
+} from "../../utility/utility";
 
 const MainDiv = styled.div`
   height: auto;
   width: 100%;
   padding: 56px 0 72px;
   box-sizing: border-box;
+  ${setBackgroundColor()}
 `;
 
 const Cards = styled.div`
@@ -29,23 +37,24 @@ const Card = styled.div`
   display: inline-block;
   margin-bottom: 18px;
   break-inside: avoid;
-  background: linear-gradient(180deg, #fafafa 0%, #f4f4f4 100%);
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
+  background: ${SURFACE_COLOR};
+  border: 1px solid ${BORDER_COLOR};
+  border-radius: 8px;
   padding: 16px 16px 18px 16px;
   box-sizing: border-box;
+  box-shadow: 0 4px 14px rgba(70, 55, 25, 0.025);
 `;
 
 const CardTitle = styled.div`
   font-size: 16px;
   font-weight: 700;
-  color: #424242;
+  color: ${TEXT_COLOR};
   font-family: "Pangolin";
   margin-bottom: 10px;
 `;
 
 const CardBody = styled.div`
-  color: #616161;
+  color: ${MUTED_TEXT_COLOR};
   font-size: 14px;
   line-height: 20px;
 `;

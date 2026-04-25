@@ -9,6 +9,7 @@ import Barcode from "react-barcode";
 import styled from "styled-components";
 import DetailCardValue from "./DetailCardValue";
 import emailIcon from "../../resouses/footer/email.svg";
+import { SOFT_SURFACE_COLOR, SURFACE_COLOR, TEXT_COLOR, MUTED_TEXT_COLOR } from "../../utility/utility";
 
 const EMAIL = "jatuporn.saenthip@gmail.com";
 
@@ -84,7 +85,7 @@ const MainCard = styled.div`
   box-sizing: border-box;
   background-color: ${(props) => props.$color};
   transition: background-color ease 0.4s;
-  border: 1px solid black;
+  border: 1px solid ${TEXT_COLOR};
   border-radius: 12px;
   display: flex;
 `;
@@ -99,12 +100,13 @@ const LeftDetail = styled.div`
 `;
 
 const ProfileImage = styled.img`
+  display: block;
   width: 110px;
   height: 150px;
   border-radius: 1px;
   max-height: 100%;
-  border: 1px solid black;
-  background-color: white;
+  border: 1px solid ${TEXT_COLOR};
+  background-color: ${SURFACE_COLOR};
   object-fit: cover;
   overflow-clip-margin: unset;
 `;
@@ -131,10 +133,10 @@ const Icon = styled.img`
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid ${TEXT_COLOR};
   object-fit: cover;
   object-position: center;
-  background-color: white;
+  background-color: ${SURFACE_COLOR};
   overflow-clip-margin: unset;
 `;
 
@@ -178,10 +180,10 @@ const BackCard = styled.div`
   background: linear-gradient(
     145deg,
     ${(props) => props.$color} 0%,
-    #ffffff 48%,
+    ${SURFACE_COLOR} 48%,
     ${(props) => props.$color} 100%
   );
-  border: 1px solid #212121;
+  border: 1px solid ${TEXT_COLOR};
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -215,7 +217,7 @@ const BackBrandTitle = styled.div`
   font-family: "Pangolin", sans-serif;
   font-size: 14px;
   font-weight: 700;
-  color: #212121;
+  color: ${TEXT_COLOR};
   line-height: 1.1;
   letter-spacing: 0.04em;
 `;
@@ -223,7 +225,7 @@ const BackBrandTitle = styled.div`
 const BackBrandSub = styled.div`
   font-family: "Pangolin", sans-serif;
   font-size: 9px;
-  color: #616161;
+  color: ${MUTED_TEXT_COLOR};
   line-height: 1.1;
 `;
 
@@ -256,7 +258,7 @@ const EmailRow = styled.a`
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  color: #212121;
+  color: ${TEXT_COLOR};
   font-family: "Kanit", "Pangolin", sans-serif;
   font-size: 12px;
   max-width: 100%;
@@ -264,13 +266,13 @@ const EmailRow = styled.a`
   text-align: center;
   padding: 6px 10px;
   border-radius: 8px;
-  border: 1px dashed #616161;
-  background: rgba(255, 255, 255, 0.65);
+  border: 1px dashed ${MUTED_TEXT_COLOR};
+  background: rgba(255, 254, 251, 0.72);
 
   @media (hover: hover) {
     &:hover {
-      background: rgba(255, 255, 255, 0.95);
-      border-color: #212121;
+      background: ${SOFT_SURFACE_COLOR};
+      border-color: ${TEXT_COLOR};
     }
   }
 `;
@@ -340,7 +342,7 @@ function clamp(n, min, max) {
 }
 
 function IdCard(props) {
-  const { colorCard, iconCard } = props;
+  const { colorCard, iconCard, profileCard } = props;
   const barcodeValue = "jatuporndev";
   const securityToken = useMemo(() => buildContactSecurityToken(EMAIL), []);
 
@@ -458,7 +460,7 @@ function IdCard(props) {
           <MainCard $color={colorCard}>
             <LeftDetail>
               <ProfileImage
-                src={require("../../resouses/profile/profile3.jpg")}
+                src={require(`../../resouses/profile/${profileCard}`)}
                 alt="profile"
                 title="profile"
               />
